@@ -7,8 +7,8 @@ language: generic
 before_install:
   - docker build -t youstest/react-test -f ./client/Dockerfile.dev ./client
 
-script:
-  - docker run youstest/react-test npm test -- --coverage
+#script:
+ # - docker run youstest/react-test npm test -- --coverage
 
 after_success:
   - docker build -t youstest/multi-client ./client
